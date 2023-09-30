@@ -4,11 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML 복습</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <!-- 
     header, main(section), ul, ol,
     form, fieldset, legend, laber, input(placeholder, required 속성), textarea 등 활용 
    -->
+   <header>
+    <h1>About Me</h1>
+    <img src="/images/lotte.jpg" alt="롯데자이언츠" width="200">
+   </header>
+   <main>
+    <section>
+    <h2>John Doe</h2>
+    <p>Email: <a href="#">john.doe@example.com</a></p>
+  </section>
+  <section>
+    <h2>Education & Work Exprerience</h2>
+    <ul>
+      <li>MSc in Computer Sceince, XYZ University, 2018-2020</li>
+      <li>Software Developer, ABC Corp, 2020-present</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Certifications & Awards</h2>
+    <ol type="A">
+      <li>Certified Python Developer, 2019</li>
+      <li>Best Employee of the Year, ABC Corp, 2021</li>
+    </ol>
+  </section>
+  <section>
+    <h2>Contact Form</h2>
+    <form action="">
+      <fieldset>
+        <legend>Your Information</legend>
+        <div>
+        <label for="username">Name:</label>
+        </div>
+        <input type="text" id="username" autofocus
+        placeholder="Enter your name">
+        <div>
+        <label for="userEmail">Email:</label>
+        </div>
+        <input type="email" id="userEmail" autofocus
+        placeholder="Enter your email">
+        <div>
+        <label for="message">Message:</label>
+        </div>
+        <textarea name="memo" id="message" cols="50" rows="5" placeholder="Enter your messgae"></textarea>
+        <button type="submit">submit</button>
+
+      </fieldset>
+    </form>
+  </section>
+   </main>
 </body>
 </html>
