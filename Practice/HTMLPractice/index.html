@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML 복습</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- 
@@ -13,13 +13,15 @@
    -->
    <header>
     <h1>About Me</h1>
-    <img src="/images/lotte.jpg" alt="롯데자이언츠" width="200">
    </header>
+
+
    <main>
     <section>
-    <h2>John Doe</h2>
-    <p>Email: <a href="#">john.doe@example.com</a></p>
-  </section>
+      <img src="/images/lotte.jpg" alt="롯데자이언츠" width="200">
+      <h2>John Doe</h2>
+      <p>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+    </section>
   <section>
     <h2>Education & Work Exprerience</h2>
     <ul>
@@ -36,25 +38,21 @@
   </section>
   <section>
     <h2>Contact Form</h2>
-    <form action="">
+    <form>
       <fieldset>
         <legend>Your Information</legend>
-        <div>
         <label for="username">Name:</label>
-        </div>
         <input type="text" id="username" autofocus
-        placeholder="Enter your name">
-        <div>
-        <label for="userEmail">Email:</label>
-        </div>
-        <input type="email" id="userEmail" autofocus
-        placeholder="Enter your email">
-        <div>
-        <label for="message">Message:</label>
-        </div>
-        <textarea name="memo" id="message" cols="50" rows="5" placeholder="Enter your messgae"></textarea>
-        <button type="submit">submit</button>
+        placeholder="Enter your name" required> <br/>
 
+        <label for="userEmail">Email:</label>
+        <input type="email" id="userEmail" autofocus
+        placeholder="Enter your email" required> <br/>
+
+        <label for="message">Message:</label> <br/>
+        <textarea name="memo" id="message" cols="50" rows="5" placeholder="Enter your messgae"></textarea required> <br/>
+          
+        <input type="submit" value="Submit">
       </fieldset>
     </form>
   </section>
