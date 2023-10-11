@@ -27,3 +27,6 @@
 // : 회원가입, 로그인, 네비바를 사용한 페이지 전환(3~5개의 페이지)
 // : 마이페이지, 장바구니
 // ex. 식료품(마켓컬리), 의류(무신사), 도서구매사이트, 은행 등
+
+// 하고(의류)
+https://www.hago.kr/?n_media=27758&n_query=%ED%95%98%EA%B3%A0&n_rank=1&n_ad_group=grp-a001-04-000000022634431&n_ad=nad-a001-04-000000265751685&n_keyword_id=nkw-a001-04-000003884203845&n_keyword=%ED%95%98%EA%B3%A0&n_campaign_type=4&n_contract=tct-a001-04-000000000755322&n_ad_group_type=5&NaPm=ct%3Dln640wz4%7Cci%3D0yC0000Q%5F1vzcpAo410P%7Ctr%3Dbrnd%7Chk%3Dc126a0942a15621ee80c34345eb09766242309f5

@@ -1,0 +1,54 @@
+h1 {
+  color: blue;
+  font-size: 36px;
+  font-family: Arial;
+  text-align: center;
+  text-shadow: 2px 2px 3px gray;
+}
+
+h2 {
+  color: green;
+  font-size: 28px;
+  font-family: Georgia;
+  text-align: left;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+p {
+  color: black;
+  font-size: 18px;
+  font-family: 'Times New Roman';
+  line-height: 1.6;
+  text-indent: 40px;
+  letter-spacing: 1.2px;
+  word-spacing: 2.4px;
+}
+
+ul {
+  color: brown;
+  font-size: 16px;
+  font-family: Verdana;
+}
+
+ul li {
+  margin: 8px;
+  text-transform: uppercase;
+}
+
+a {
+  color: purple;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  font-family: Arial;
+  text-shadow: 1px 1px 2px black;
+}
+
+a:hover {
+  color: red;
+}
+a:visited {
+  color: gray;
+}
+
