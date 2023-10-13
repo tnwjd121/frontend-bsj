@@ -115,3 +115,10 @@ git add .
 git commit -m ""
 git pull origin main
 git push origin main
+
+// 로컬에서 삭제 된 파일 git에 업데이트 
+
+1. git add -u
+2. git commit -a -m "massage"
+-> -a 옵션을 붙이면 삭제된 파일만 반영
+3. git push origin main
