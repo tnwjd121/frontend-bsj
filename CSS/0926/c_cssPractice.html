@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css스타일 시트 적용 예제</title>
+  <style>
+  h2 { 
+    color: pink;
+  }
+  </style>
+  <link rel="stylesheet" href="styles/c_cssPractice.css">
+  <!-- 
+    link 적용 시 폴더 구조에 따른 수신처 작성법 
+    1. 동일한 폴더 내의 파일: 파일명.확장자]
+    2. 동일한 폴더 내의 하위 폴더에 존재하는 파일 : 폴더명/파일명.확장자
+    3. 상위 폴더 내의 파일: ../파일명.확장자
+    4. 상위 폴더 내의 다른 폴더 내의 파일: ../폴더명/파일명.확장자
+
+  -->
+</head>
+<body>
+  
+<header>
+
+  <h1 style="text-align: center; "> HTML 연습 예시</h1>
+  <h2>Head 태그</h2>
+</header>
+<main>
+  <!-- main h2 태그에 내부인라인 pink -->
+  <section>
+    <h2>Text</h2>
+    <p>HTML 예제 실습입니다.</p>
+  </section>
+  <section>
+    <ul>
+      <li>항목1</li>
+      <li>항목2</li>
+      <li>항목3</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Table</h2>
+    <table>
+      <thead>
+        <tr>
+        <th>이름</th>
+        <th>나이</th>
+        <th>이메일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>홍길동</td>
+        <td>30</td>
+        <td>hong@example.com</td>
+        </tr>
+        <tr>
+        <td >김철수</td>
+        <td>25</td>
+        <td>kim@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Image</h2>
+    <img src="images/chick-5014152_1280.jpg" alt="병아리" width="20%">
+  </section>
+  <section>
+    <h2>시맨틱 태그</h2>
+
+  </section>
+        <!-- h1태그에 인라인 시트 - 글자색 tomaoto -->
+  <h1 style="text-align: center;color: tomato;">웹사이트 제목</h1>
+  <ul>
+    <li><a href="#">메뉴1</a></li>
+    <li><a href="#">메뉴2</a></li>
+    <li><a href="#">메뉴3</a></li>
+  </ul>
+  <section>
+    <h2>섹션 제목</h2>
+    <h3>글 제목</h3>
+    <p>본문 내용</p>
+    <h3>글 제목</h3>
+    <p>본문 내용</p>
+  </section>
+</main>
+
+<!-- fotter외부 스타일 글자색blue -->
+<footer>
+  <p>저작권 2023 모든 권리 보유</p>
+</footer>
+</body>
+</html>

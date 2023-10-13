@@ -1,0 +1,36 @@
+/* id 스타일  */
+#sajik {
+  color: blueviolet;
+}
+
+
+/* class 스타일 */
+.where {
+  color: black;
+}
+
+/* 타입 스타일 */
+p {
+  color: pink;
+}
+
+/* !important 스타일 */
+h2 {
+  color: brown !important;
+}
+
+/* p타입 속성이 위에도 있지만 나중에 작성한 스타일이 먼저 작성한 스타일을 덮어쓰기 때문에 cornflowerblue가 적용 */
+p {
+  color: cornflowerblue;
+}
+
+
+div {
+  width: 300px;
+  height: 300px;
+  background-color: yellow;
+}
+
+.inherit {
+  width: inherit;
+}
