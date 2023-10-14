@@ -11,7 +11,8 @@ h1 {
   /* 가로 축 - 가운데 정렬 */
   text-align: center;
   color: white;
-  /* 요소의 전체 높이와 동일하게 지정: 세로 축 - 가운데 정렬 */
+  /* 
+  요소의 전체 높이와 동일하게 지정: 세로 축 - 가운데 정렬 */
   line-height: 100px;
   margin: 0;
 }
@@ -31,12 +32,12 @@ article {
   padding: 10px;
   margin: 10px;
   background-color: aquamarine;
-  /* flex: 200px; */
+
 }
 
 #pitcher {
- order: 3;
- flex: 1;
+  order: 3;
+  flex: 1;
 }
 
 #catcher {
@@ -47,5 +48,4 @@ article {
 #fielder {
   order: 2;
   flex: 1;
-
 }
