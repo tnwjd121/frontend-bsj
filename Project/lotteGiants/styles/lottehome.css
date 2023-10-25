@@ -17,12 +17,24 @@ h1, h2, h3 {
   background-color: rgb(5, 24, 47);
   height: 50px;
 }
+
+.top {
+  padding: 12px 25px;
+  background-color: rgb(209,5,38);
+  color: white;
+  position: fixed;
+  top: -18px;
+  right: 0px;
+  font-size: 14px;
+  font-weight: 800;
+
+}
 .topmenu {
   color: white;
   display: flex;
   justify-content: space-between;
   margin: auto;
-  width: 1400px;
+  width: 1300px;
   height: 100%;
 }
 
@@ -58,7 +70,7 @@ h1, h2, h3 {
 }
 .mainmenu {
   display: flex;
-  width: 1400px;
+  width: 1300px;
   margin: auto;
   justify-content: space-around;
   font-size: 20px;
@@ -145,12 +157,12 @@ h3 {
 
 #scorenum {
   font-size: 34px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(183,183,183);
   padding-bottom: 18px;
 }
 
 .schedule_score_list h3{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(183,183,183);
   padding: 4px 0px 4px 0px;
 }
 
@@ -163,6 +175,7 @@ h3 {
   display: inline-block;
     background: #363636;
     border-radius: 16px;
+    margin-top: 50px;
     padding: 4px 20px;
     color: white;
 }
@@ -262,7 +275,7 @@ h3 {
   width: 140px;
   height: 89px;
   overflow: hidden;
-  border: 1px solid black;
+  border: 1px solid #E6E6E6;
 }
 
 .img_box img {
@@ -323,7 +336,7 @@ h3 {
 }
 
 .footerback1 {
-  width: 1400px;
+  width: 1300px;
   display: flex;
   justify-content: center;
   margin: auto;
@@ -348,7 +361,7 @@ h3 {
 
 .footerback2 {
   padding: 20px;
-  width: 1400px;
+  width: 1300px;
   margin: auto;
   display: flex;
   justify-content: space-between;
