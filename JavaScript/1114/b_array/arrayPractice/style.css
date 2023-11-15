@@ -1,3 +1,4 @@
+/*^ 사용자 목록을 보여주는 웹 페이지 */
 .user {
   background-color: #f4f4f4;
   border: 1px solid #ddd;
@@ -13,8 +14,7 @@
   color: #666;
 }
 
-/* 최신 검색목록을 보여주는 검색창 */
-
+/*^ 최신 검색목록을 보여주는 검색창 */
 .search-container {
   margin: 20px;
   text-align: center;
