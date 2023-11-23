@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 문서 객체 조작</title>
+  <script>
+    // const h1 = (text) => `<h1>${text}</h1>`
+    // body 태그가 생성되기 이전에 script 태그로 body 태그를 조작(ERROR)
+    // document.body.innerHTML += h1('1번째 script 태그');
+
+    document.addEventListener
+    ('DOMContentLoaded', 
+      () => {
+      
+      })
+  </script>
+
+</head>
+<h1> 수정 해야됨</h1>
+
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+<body>
+  <h1></h1>
+  <script>
+    const h2 = (text) => `<h1>${text}</h1>`
+    // body 태그가 생성되기 이전이 script 태그로 body 태그를 조작
+    document.body.innerHTML += h2('1번째 script 태그');
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
