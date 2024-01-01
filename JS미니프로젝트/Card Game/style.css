@@ -9,14 +9,13 @@
   height: 80%;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgb(198, 245, 234);
+  background-color: rgb(242, 251, 237);
 }
 
 /* 게임 컨테이너 설정 */
 #game-container {
   height: 90%;
   margin-bottom: 20px;
-
 }
 
 /* 카드 컨테이너 설정 */
@@ -29,13 +28,14 @@
 }
 
 /* JS로 구현된 카드 디자인 설정 */
-.card { 
+.card {
   width: 100%;
   height: 150px;
   /* 원근감을 지정하는 속성 */
   perspective: 1000px;
   display: inline-block;
 }
+
 .card-inner {
   width: 100%;
   height: 100%;
@@ -45,12 +45,13 @@
   transition: transform 0.5s;
 }
 
+/* card 요소에 flipped 클래스명이 지정된 경우 */
 .card.flipped .card-inner {
-  /* 카드가 뒤집힐 때 스타일, y축으로 180도 회전 */
+  /* 카드가 뒤집힐 때 스타일, Y축으로 180도 회전 */
   transform: rotateY(180deg);
 }
 
-.card-front
+.card-front,
 .card-back {
   width: 100%;
   height: 100%;
@@ -68,6 +69,7 @@
 }
 
 .card-back {
+  /* Y축으로 180도 회전 */
   transform: rotateY(180deg);
   border-radius: 10px;
 }
@@ -84,7 +86,13 @@ button {
   border-radius: 10px;
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 30;
+  font-size: 18px;
   font-weight: 900;
   color: white;
+}
+
+#button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
