@@ -6,6 +6,7 @@ import Index1222 from "./views/1222";
 import Index1226 from "./views/1226";
 import Index1228 from "./views/1228";
 import Index1229 from "./views/1229/react";
+import Index0102 from "./views/0102";
 
 function App() {
   return (
@@ -18,12 +19,13 @@ function App() {
           npm run start의 첫번째 렌더링 페이지의 경우 경로를 "/" 전달 
          */}
         {/* <Route path="/" element={<렌더링 할 페이지 />} /> */}
-        <Route path="/1219" element={<Index1219 />} />
-        <Route path="/1221" element={<Index1221 />} />
-        <Route path="/1222" element={<Index1222 />} />
+        <Route path="/1219" element={<Index1219 />}/>
+        <Route path="/1221" element={<Index1221 />}/>
+        <Route path="/1222" element={<Index1222 />}/>
         <Route path="/1226" element={<Index1226 />}/>
         <Route path="/1228" element={<Index1228 />}/>        
         <Route path="/1229" element={<Index1229 />}/>        
+        <Route path="/0102" element={<Index0102 />}/>        
 
       </Routes>
     </>
