@@ -19,7 +19,7 @@ import React, { useEffect, useState } from 'react'
 //> 포트번호 생략 시 기본 3000포트로 지정
 
 // api 호출을 위한 axios 설치
-// : nppm install axios
+// : npm install axios
 
 // api 호출로 가져올 응답 데이터에 대한 타입 정의
 interface User {
