@@ -1,5 +1,15 @@
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700;800&display=swap');
+
 * {
   border: 0;
   margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
+
+.border-separator {
+  padding-right: 2.0em;
+  border-right: 1px solid #000;
+  margin-right: 2.0em;
+
+}

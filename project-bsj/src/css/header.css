@@ -1,9 +1,28 @@
 .header1{
-  text-align: center;
-  justify-content: center;
+  margin: 0;
+  padding: 5px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(244, 177, 132);
+  color: white;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.8rem;
+  /* rem 반응형 */
+}
+
+.header1-right{
+  display: flex;
+  gap: 10px;
 }
 
 .header2{
-  text-align: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  background-color: rgb(251, 229, 214);
+  padding: 20px;
 }

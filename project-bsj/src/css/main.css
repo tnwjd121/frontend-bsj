@@ -1,0 +1,40 @@
+.ranking-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 250px;
+}
+
+.ranking-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ranking-list ul {
+  padding: 0;
+}
+
+.ranking-list li {
+  list-style: none;
+}
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.list-left {
+  display: flex;
+  gap: 10px;
+}
+
+.list-right {
+  display: flex;
+  gap: 10px;
+}
+
