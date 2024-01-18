@@ -16,12 +16,12 @@ export default function Header() {
           <div><FaSearch/></div>
         </div>
       </div>
-      <div className='header2'>
+      {/* <div className='header2'>
         <div className='border-separator'>게임 등록</div>
         <div className='border-separator'>게임 추천</div>
         <div className='border-separator'>보유 목록</div>
         <div>찜 목록</div>
-      </div>
+      </div> */}
     </>
   )
 }

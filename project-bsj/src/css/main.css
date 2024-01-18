@@ -1,10 +1,10 @@
-.ranking-container {
+.main-container {
   display: flex;
   flex-direction: column;
   padding: 30px 250px;
 }
 
-.ranking-title {
+.main-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,15 +12,15 @@
 
 .filter {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   gap: 10px;
 }
 
-.ranking-list ul {
+.main-list ul {
   padding: 0;
 }
 
-.ranking-list li {
+.main-list li {
   list-style: none;
 }
 .list-item {
@@ -38,3 +38,7 @@
   gap: 10px;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+}

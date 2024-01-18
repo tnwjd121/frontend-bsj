@@ -13,3 +13,21 @@
   margin-right: 2.0em;
 
 }
+
+.nav{
+  background-color: rgb(251, 229, 214);
+  padding: 20px;
+}
+.nav ul {
+  list-style: none;
+text-align: center;
+}
+
+.nav ul li {
+  display: inline;
+}
+
+.li-css {
+  text-decoration: none;
+  color: black;
+}
