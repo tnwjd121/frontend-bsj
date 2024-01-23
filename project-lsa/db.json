@@ -1,6 +1,93 @@
 {
   "books": [
-    { "id": 1, "title": "Book 1", "author": "Author 1", "description": "Description 1" },
-    { "id": 2, "title": "Book 2", "author": "Author 2", "description": "Description 2" }
+    {
+      "id": "1",
+      "title": "Book 1",
+      "author": "Author 1",
+      "description": "Description 1"
+    },
+    {
+      "id": "2",
+      "title": "Book 2",
+      "author": "Author 2",
+      "description": "Description 2"
+    }
+  ],
+  "users": [
+    {
+      "userId": "abc123",
+      "password": "abc123",
+      "id": "f70d"
+    },
+    {
+      "id": "3d51",
+      "userId": "abc123",
+      "password": "abc123"
+    },
+    {
+      "id": "d849",
+      "userId": "dfsadfs",
+      "password": "sdfsdfsd"
+    },
+    {
+      "id": "7402",
+      "userId": "dfsadfs",
+      "password": "sdfsdfsd"
+    },
+    {
+      "id": "437f",
+      "userId": "dfsadfs",
+      "password": "sdfsdfsd"
+    },
+    {
+      "id": "caaf",
+      "userId": "",
+      "password": ""
+    },
+    {
+      "id": "7b23",
+      "userId": "ddd",
+      "password": "ddd"
+    },
+    {
+      "id": "6eac",
+      "userId": "ddd",
+      "password": "ddd"
+    },
+    {
+      "id": "59de",
+      "userId": "ddd",
+      "password": "ddd"
+    },
+    {
+      "id": "f9cf",
+      "userId": "dfsdfsa",
+      "password": "sadfsdfsd"
+    },
+    {
+      "id": "4a54",
+      "userId": "dfsdfsa",
+      "password": "sadfsdfsd"
+    },
+    {
+      "id": "ec4c",
+      "userId": "fsafsd",
+      "password": "sdfsdfsd"
+    },
+    {
+      "id": "e3a2",
+      "userId": "fsafsd",
+      "password": "sdfsdfsd"
+    },
+    {
+      "id": "7907",
+      "userId": "fsafsd",
+      "password": "sdfsdfsd"
+    },
+    {
+      "id": "3ea2",
+      "userId": "fsafsd",
+      "password": "sdfsdfsd"
+    }
   ]
 }

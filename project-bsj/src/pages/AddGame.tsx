@@ -1,7 +1,21 @@
 import React from 'react'
 import '../css/addGame.css';
+import index from '.';
 
 export default function AddGame() {
+
+  type Genre = string;
+  const genres: Genre[] = [
+    '액션', 'RPG', '어드벤처', '파티', '전략',
+    '음악', '스포츠', '아케이드', '격투', '퍼즐',
+    '레이싱', '시뮬레이션', '슈팅', '보드', '실용',
+    '트레이닝', '학습', '기타'
+  ]
+
+  type Console = string;
+  const consoles: Console[] = [
+    '닌텐도스위치', 'PS4', 'PS5', 'Xbox', '기타'
+  ]
   return (
     <div className='current-page-container'>
       <div className='addgame-container'>
@@ -13,17 +27,17 @@ export default function AddGame() {
           <label>
             <span>장르</span>
             <select id="type">
-              <option>장르1</option>
-              <option>장르2</option>
-              <option>장르3</option>
+              {genres.map((genre, index) => (
+                <option key={index}>{genre}</option>
+              ))}
             </select>
           </label>
           <label>
             <span>콘솔</span>
             <select id="console">
-              <option>콘솔1</option>
-              <option>콘솔2</option>
-              <option>콘솔3</option>
+              {consoles.map((console, index)=> (
+                <option key={index}>{console}</option>
+              ))}
             </select>
           </label>
           <label>

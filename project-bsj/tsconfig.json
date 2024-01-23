@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/pages/Get.tsx", "src/pages/Like.tsx"  ]
 }

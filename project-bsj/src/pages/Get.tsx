@@ -1,8 +1,8 @@
 import React from 'react'
-import '../css/recommend.css';
+import '../css/get.css';
 import { VscTriangleLeft, VscTriangleRight } from 'react-icons/vsc';
 
-export default function Recommend() {
+export default function Get() {
   type Genre = string;
   const genres: Genre[] = [
     '액션', 'RPG', '어드벤처', '파티', '전략',
@@ -74,7 +74,7 @@ export default function Recommend() {
       <div className='main-container'>
         <div className="main-title">
           <div>
-            <h2>게임추천[#,###개]</h2>
+            <h2>보유 목록[#,###개]</h2>
           </div>
         </div>
         <div className='main-list'>
