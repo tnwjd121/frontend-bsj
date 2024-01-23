@@ -1,0 +1,15 @@
+.filter-console ul{
+  list-style: none;
+  text-align: center;
+}
+.filter-console ul li{
+  display: inline;
+}
+
+.filter-type ul{
+  list-style: none;
+  text-align: center;
+}
+.filter-type ul li{
+  display: inline;
+}

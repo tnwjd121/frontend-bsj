@@ -5,6 +5,7 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import AddGame from './pages/AddGame';
 import './App.css';
+import Recommend from './pages/Recommend';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <nav className='nav'>
           <ul>
             <li className='border-separator'><Link to='/AddGame' className='li-css'>게임등록</Link></li>
-            <li className='border-separator'><Link to='/AddGame' className='li-css'>게임추천</Link></li>
+            <li className='border-separator'><Link to='/Recommend' className='li-css'>게임추천</Link></li>
             <li className='border-separator'><Link to='/AddGame' className='li-css'>보유목록</Link></li>
             <li><Link to='/AddGame' className='li-css'>찜목록</Link></li>
           </ul>
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Main />} />      
           <Route path='/AddGame' element={<AddGame />} />
+          <Route path='/Recommend' element={<Recommend />} />
         </Routes>
         <Footer/>
       </>
