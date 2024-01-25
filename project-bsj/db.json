@@ -1,3 +1,24 @@
 {
-  
+  "users": [
+    {
+      "id": 1,
+      "email": "dde@email.com",
+      "password": "12345678",
+      "name": "홍길동",
+      "nickName": "길동쓰",
+      "gender": "남성",
+      "birth": "2020-01-01",
+      "phoneNumber": "01055645854"
+    },
+    {
+      "id": "2",
+      "email": "aojj121@gmail.com",
+      "password": "1234",
+      "name": "백수정",
+      "nickName": "tnwjd121",
+      "gender": "여성",
+      "birth": "2000-07-21",
+      "phoneNumber": "01075662120"
+    }
+  ]
 }

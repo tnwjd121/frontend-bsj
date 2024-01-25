@@ -3,23 +3,29 @@ import React, { useState } from 'react'
 import { useAuthStore } from './store';
 import { useCookies } from 'react-cookie';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'http://localhost:5000/';
 
 export default function Login() {
   const [userId, setUserId] = useState('');
   const [password, setPassword] = useState('');
-  const [cookies, setCookie] = useCookies(['token']);
+  const [cookies, setCookie, removeCookie] = useCookies(['token']);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${API_URL}/users`, {userId, password});
+      const response = await axios.post(`${API_URL}`, {userId, password});
       useAuthStore.getState().setToken(response.data.token);
       setCookie('token', response.data.token, { path: '/'});
     } catch(error) {
       console.error(error);
     }
   }
+
+  const logout = () => {
+    // removeCookie('token', {path: '/'});
+    setCookie('token', '', {path: '/', expires: new Date(0)});
+  }
+
   return (
     <>
       <form onSubmit={handleLogin}>
@@ -35,6 +41,7 @@ export default function Login() {
         />
         <button type='submit'>로그인</button>
       </form>
+      <button onClick={logout}>로그아웃</button>
     </>
   )
 }

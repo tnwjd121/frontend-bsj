@@ -9,6 +9,8 @@ import Recommend from './pages/Recommend';
 import Get from './pages/Get';
 import Like from './pages/Like';
 import Search from './pages/Search';
+import Login from './pages/Login';
+import Join from './pages/Join';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
           <Route path='/Get' element={<Get />} />
           <Route path='/Like' element={<Like />} /> 
           <Route path='/Search' element={<Search />} /> 
+          <Route path='/Login' element={<Login />} /> 
+          <Route path='/Join' element={<Join />} /> 
         </Routes>
         <Footer/>
       </>

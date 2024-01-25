@@ -1,0 +1,47 @@
+.join-box {
+  border: 1px solid rgb(142, 139, 139);
+  border-radius: 5px;
+  height: 800px;
+  width: 400px;
+  padding: 40px;
+  /* 정가운데 고정 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.join-title {
+  margin-bottom: 15px;
+  color: rgb(244, 177, 132);
+}
+.join-title label {
+  margin-bottom: 10px;
+}
+
+.join-box label span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.join-box label input, .join-box label select {
+  width: 400px;
+  height: 55px;
+  font-size: 18px;
+}
+
+.join-box label span {
+  color: rgb(242, 166, 115);
+}
+
+.join-button {
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 5px 70px;
+  font-size: 20px;
+  background-color: rgb(244, 160, 104);
+  color: white;
+  margin-top: 15px;
+}
+

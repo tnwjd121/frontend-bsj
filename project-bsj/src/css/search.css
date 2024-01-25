@@ -10,6 +10,7 @@
   margin: 0 20%;
   text-align: center;
   gap: 20px;
+  min-width: 710px;
 }
 
 .filter-console span,
