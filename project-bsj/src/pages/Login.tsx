@@ -1,25 +1,25 @@
 import React, { ChangeEvent, useState } from 'react'
 import '../css/login.css';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 
 const API_URL = 'http://localhost:5000';
 
+interface LoginData {
+  email: string,
+  password: string
+}
+
 export default function Login() {
-
-  interface LoginData {
-    email: string,
-    password: string
-  }
-
-  const [loginData, SetLoginData] = useState<LoginData>({
+  const [cookies, setCookie, removeCookie] = useCookies(['token']);
+  const [loginData, setLoginData] = useState<LoginData>({
     email: '',
     password: ''
   })
 
   const handChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const {id, value} = e.target;
-    SetLoginData((prevData) => ({
+    setLoginData((prevData) => ({
       ...prevData,
       [id]: value,
     }))
@@ -32,7 +32,8 @@ export default function Login() {
 
       // 로그인 성공 여부 확인
       if (response.data.length > 0) {
-          // 해당 사이트로 가게 만들기
+        setCookie('token', true, { path: '/' });
+          alert('로그인 성공')
       } else {
         alert('로그인 실패하였습니다.')
       }
@@ -40,6 +41,10 @@ export default function Login() {
       console.error('로그인 중 오류 발생:', error);
     }
   }
+
+  const handleLogout = () => {
+    removeCookie('token', { path: '/' });
+  };
 
 
   return (

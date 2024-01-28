@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "email": "dde@email.com",
       "password": "12345678",
       "name": "홍길동",
@@ -19,6 +19,26 @@
       "gender": "여성",
       "birth": "2000-07-21",
       "phoneNumber": "01075662120"
+    },
+    {
+      "id": "80b8",
+      "email": "aojj121@naver.com",
+      "password": "5678",
+      "name": "김수정",
+      "nickName": "김수정",
+      "gender": "남성",
+      "birth": "2023-11-24",
+      "phoneNumber": "01056483185"
+    },
+    {
+      "id": "1f60",
+      "email": "dfsdfs@naver.com",
+      "password": "5678",
+      "name": "강한사",
+      "nickName": "강한남",
+      "gender": "남성",
+      "birth": "2024-01-03",
+      "phoneNumber": "01056848952"
     }
   ]
 }

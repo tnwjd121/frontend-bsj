@@ -1,10 +1,13 @@
 import React, { ChangeEvent, useState } from 'react'
 import '../css/join.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const API_URL = 'http://localhost:5000';
 
 export default function Join() {
+
+  const navigate = useNavigate();
   
   interface JoinData {
     email: string;
@@ -60,7 +63,7 @@ export default function Join() {
       }
       const { passwordConfirm, ...dataWithoutPasswordConfirm } = joinData;
       const response = await axios.post(`${API_URL}/users`, dataWithoutPasswordConfirm)
-      console.log(response.data)
+      navigate('/')
     }catch (error) {
       console.error('가입 중 오류 발생:', error)
     }
@@ -70,41 +73,47 @@ export default function Join() {
     <>
       <div className='join-box'>
         <h2 className='join-title'>회원가입</h2>
-        <label>
-          <span>아이디(이메일)</span>
-          <input type="text" id="email" placeholder='이메일 주소를 입력하세요' onChange={handleChange} />
-        </label>
-        <label>
-          <span>비밀번호</span>
-          <input type="password" id="password" placeholder='비밀번호를 입력하세요' onChange={handleChange}/>
-        </label>
-        <label>
-          <span>비밀번호 확인</span>
-          <input type="password" id="passwordConfirm" placeholder='비밀번호를 재입력하세요'onChange={handleChange}/>
-        </label>
-        <label>
-          <span>이름</span>
-          <input type="text" id="name" placeholder='이름을 입력하세요' onChange={handleChange}/>
-        </label>
-        <label>
-          <span>닉네임</span>
-          <input type="text" id="nickName" placeholder='닉네임을 입력하세요' onChange={handleChange}/>
-        </label>
-        <label>
-          <span>성별</span>
-          <select id="gender" onChange={handleChange}>
-            <option>남성</option>
-            <option>여성</option>
-          </select>
-        </label>
-        <label>
-          <span>생년월일</span>
-          <input type="date" id='birth' onChange={handleChange}/>
-        </label>
-        <label>
-          <span>전화번호</span>
-          <input type="text" id="phoneNumber" placeholder='휴대폰번호 입력("-"제외 11자리입력)' onChange={handleChange}/>
-        </label>
+        <div className='join-container'>
+          <div className='join-container-left'>
+          <label>
+            <span>아이디(이메일)</span>
+            <input type="text" id="email" placeholder='이메일 주소를 입력하세요' onChange={handleChange} />
+          </label>
+          <label>
+            <span>비밀번호</span>
+            <input type="password" id="password" placeholder='비밀번호를 입력하세요' onChange={handleChange}/>
+          </label>
+          <label>
+            <span>비밀번호 확인</span>
+            <input type="password" id="passwordConfirm" placeholder='비밀번호를 재입력하세요'onChange={handleChange}/>
+          </label>
+          <label>
+            <span>이름</span>
+            <input type="text" id="name" placeholder='이름을 입력하세요' onChange={handleChange}/>
+          </label>
+          </div>
+          <div className='join-container-right'>
+          <label>
+            <span>닉네임</span>
+            <input type="text" id="nickName" placeholder='닉네임을 입력하세요' onChange={handleChange}/>
+          </label>
+          <label>
+            <span>성별</span>
+            <select id="gender" onChange={handleChange}>
+              <option>남성</option>
+              <option>여성</option>
+            </select>
+          </label>
+          <label>
+            <span>생년월일</span>
+            <input type="date" id='birth' onChange={handleChange}/>
+          </label>
+          <label>
+            <span>전화번호</span>
+            <input type="text" id="phoneNumber" placeholder='휴대폰번호 입력("-"제외 11자리입력)' onChange={handleChange}/>
+          </label>
+          </div>
+        </div>
         <button className='join-button' onClick={handleClick}>Join</button>
       </div>
     </>

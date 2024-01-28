@@ -1,14 +1,19 @@
 .join-box {
   border: 1px solid rgb(142, 139, 139);
   border-radius: 5px;
-  height: 800px;
-  width: 400px;
+  height: 450px;
+  width: 800px;
   padding: 40px;
   /* 정가운데 고정 */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.join-container {
+  display: flex;
+  flex-direction: row;
 }
 
 .join-title {
@@ -45,3 +50,19 @@
   margin-top: 15px;
 }
 
+/* 화면 크기가 600px 이하일 때 폰트 크기 조절 */
+@media (max-width: 600px) {
+  .join-box label input,
+  .join-box label select {
+    width: 100%; 
+    font-size: 10px;
+  }
+
+  .join-box label span {
+    font-size: 10px;
+  }
+
+  .join-button {
+    font-size: 16px;
+  }
+}
