@@ -2,6 +2,7 @@ import React, { ChangeEvent, useState } from 'react'
 import '../css/login.css';
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
+import { useNavigate } from 'react-router-dom';
 
 const API_URL = 'http://localhost:5000';
 
@@ -11,6 +12,7 @@ interface LoginData {
 }
 
 export default function Login() {
+  const navigate = useNavigate();
   const [cookies, setCookie, removeCookie] = useCookies(['token']);
   const [loginData, setLoginData] = useState<LoginData>({
     email: '',
@@ -33,7 +35,8 @@ export default function Login() {
       // 로그인 성공 여부 확인
       if (response.data.length > 0) {
         setCookie('token', true, { path: '/' });
-          alert('로그인 성공')
+        navigate('/')
+        alert('로그인 성공')
       } else {
         alert('로그인 실패하였습니다.')
       }
