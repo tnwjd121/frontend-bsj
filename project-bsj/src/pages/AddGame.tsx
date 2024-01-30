@@ -7,7 +7,7 @@ import axios from 'axios';
 const API_URL = 'http://localhost:5000';
 
 export default function AddGame() {
-
+  const [imageBlob, setImageBlob] = useState<Blob | null>(null);
   const navigate = useNavigate();
 
   interface GameData {
@@ -21,7 +21,7 @@ export default function AddGame() {
     releasedate: string;
     price: string;
     playtime: string;
-    img?: File;
+    img?: Blob | undefined;
   }
 
   const [gameData, setGameData] = useState<GameData>({
@@ -48,12 +48,10 @@ export default function AddGame() {
   const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
     const imageInput = e.target as HTMLInputElement;
     const selectedFile = imageInput.files?.[0];
-  
+
     if (selectedFile) {
-      setGameData((prevData) => ({
-        ...prevData,
-        img: selectedFile,
-      }));
+      const blob = new Blob([selectedFile]);
+      setImageBlob(blob);
     }
   };
   const handleClick = async () => {
@@ -67,28 +65,26 @@ export default function AddGame() {
         return;
       }
 
-      // 이미지 파일을 FormData로 감싸서 전송
-      const formData = new FormData();
-      formData.append('gameName', gameData.gameName);
-      formData.append('genre', gameData.genre);
-      formData.append('console', gameData.console);
-      formData.append('rating', gameData.rating);
-      formData.append('headcountLow', gameData.headcountLow);
-      formData.append('headcountHigh', gameData.headcountHigh);
-      formData.append('language', gameData.language);
-      formData.append('releasedate', gameData.releasedate);
-      formData.append('price', gameData.price);
-      formData.append('playtime', gameData.playtime);
+      // 이미지 Blob을 게임 데이터에 추가
+      setGameData((prevData) => ({
+        ...prevData,
+        img: imageBlob !== null ? imageBlob : undefined,  // null 대신 undefined 반환
+      }));
 
-      if (gameData.img) {
-        formData.append('img', gameData.img);
-      }
-
-      // 목서버로 데이터 전송
-      const response = await axios.post(`${API_URL}/game`, formData);
+      // 목서버로 데이터 전송 및 응답 받기
+      const response = await axios.post(`${API_URL}/game`, gameData, {
+        headers: {
+          'Content-Type': 'application/json',  // 이미지를 Blob으로 보내므로 Content-Type 변경
+        },
+        transformResponse: [],  // 필요에 따라 다른 변환 함수를 추가
+      });
 
       // 응답 처리
+      console.log('게임 등록 성공:', response.data);
 
+      // 성공적으로 등록되면 페이지를 이동하거나 다른 작업을 수행할 수 있습니다.
+      // 예를 들어, 등록 후 목록 페이지로 이동
+      // navigate('/game-list');
     } catch (error) {
       console.error('게임 등록 오류:', error);
     }

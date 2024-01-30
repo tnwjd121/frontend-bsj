@@ -32,5 +32,18 @@
     }
   ],
   "game": [
+    {
+      "id": "4512",
+      "gameName": "ㅇㅇㅇ",
+      "genre": "파티",
+      "console": "PS5",
+      "rating": "15세이용가",
+      "headcountLow": "1",
+      "headcountHigh": "4",
+      "language": "ㅇㅇ",
+      "releasedate": "2024-01-04",
+      "price": "4444",
+      "playtime": "40"
+    }
   ]
 }
