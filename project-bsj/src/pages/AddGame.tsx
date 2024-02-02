@@ -7,7 +7,7 @@ import axios from 'axios';
 const API_URL = 'http://localhost:5000';
 
 export default function AddGame() {
-  const [imageBlob, setImageBlob] = useState<Blob | null>(null);
+
   const navigate = useNavigate();
 
   interface GameData {
@@ -21,7 +21,7 @@ export default function AddGame() {
     releasedate: string;
     price: string;
     playtime: string;
-    img?: Blob | undefined;
+    img: string;
   }
 
   const [gameData, setGameData] = useState<GameData>({
@@ -34,8 +34,20 @@ export default function AddGame() {
     language: '',
     releasedate: '',
     price: '',
-    playtime: ''
+    playtime: '',
+    img: ''
   })
+
+  function encodeImageFileAsURL(element: HTMLInputElement, callback: (result: string) => void) {
+    const file = element.files && element.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = function () {
+        callback(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  }
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const {id, value} = e.target;
@@ -45,46 +57,36 @@ export default function AddGame() {
     }))
   }
 
-  const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const imageInput = e.target as HTMLInputElement;
-    const selectedFile = imageInput.files?.[0];
-
-    if (selectedFile) {
-      const blob = new Blob([selectedFile]);
-      setImageBlob(blob);
-    }
-  };
   const handleClick = async () => {
     try {
       const emptyFields = Object.entries(gameData)
-        .filter(([key, value]) => !value || (typeof value === 'string' && !value.trim()))
+        .filter(([key, value]) => !value.trim())
         .map(([key]) => key);
-
       if (emptyFields.length > 0) {
         alert(`${emptyFields.join(', ')}을(를) 입력하세요.`);
         return;
       }
 
-      // 이미지 Blob을 게임 데이터에 추가
-      setGameData((prevData) => ({
-        ...prevData,
-        img: imageBlob !== null ? imageBlob : undefined,  // null 대신 undefined 반환
-      }));
+      // 이미지 파일을 base64로 인코딩
+      const imageInput = document.getElementById('img') as HTMLInputElement;
+      let imageData = '';
+      if (imageInput.files && imageInput.files[0]) {
+        await new Promise<void>((resolve) => {
+          encodeImageFileAsURL(imageInput, (result) => {
+            imageData = result;
+            resolve();
+          });
+        });
+      }
 
-      // 목서버로 데이터 전송 및 응답 받기
-      const response = await axios.post(`${API_URL}/game`, gameData, {
-        headers: {
-          'Content-Type': 'application/json',  // 이미지를 Blob으로 보내므로 Content-Type 변경
-        },
-        transformResponse: [],  // 필요에 따라 다른 변환 함수를 추가
-      });
+      // 게임 데이터와 이미지 데이터를 합치기
+      const gameDataWithImage: GameData = { ...gameData, img: imageData };
+
+      // 목서버로 데이터 전송
+      const response = await axios.post(`${API_URL}/game`, gameDataWithImage);
 
       // 응답 처리
-      console.log('게임 등록 성공:', response.data);
 
-      // 성공적으로 등록되면 페이지를 이동하거나 다른 작업을 수행할 수 있습니다.
-      // 예를 들어, 등록 후 목록 페이지로 이동
-      // navigate('/game-list');
     } catch (error) {
       console.error('게임 등록 오류:', error);
     }
@@ -161,7 +163,7 @@ export default function AddGame() {
           </label>
           <label>
             <span>타이틀 이미지</span>
-              <input type="file" id="img" onChange={handleImageChange}/>
+              <input type="file" id="img" onChange={handleChange}/>
           </label>
           <button className='add-button' onClick={handleClick}>등록</button>
       </div>
